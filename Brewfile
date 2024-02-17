@@ -7,7 +7,6 @@ brew "ripgrep"
 brew "stow"
 brew "tmux"
 brew "zoxide"
-brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh"
 

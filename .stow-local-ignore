@@ -4,10 +4,10 @@
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
-# Brew
+# Brew & APT
 Brewfile*
 Brewfile.lock.json
-fonts
+aptfile
 # Emacs
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files

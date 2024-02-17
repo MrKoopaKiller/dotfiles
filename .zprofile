@@ -1,5 +1,9 @@
 # Load Brew 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ $(uname) == 'Darwin' ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # Default Editor
 export EDITOR=nvim
