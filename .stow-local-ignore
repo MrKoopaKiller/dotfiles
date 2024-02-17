@@ -1,0 +1,13 @@
+# stow-local-ignore
+\.git
+\.gitignore
+^/README.*
+^/LICENSE.*
+^/COPYING
+# Brew
+Brewfile*
+Brewfile.lock.json
+fonts
+# Emacs
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
