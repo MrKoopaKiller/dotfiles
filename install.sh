@@ -1,7 +1,10 @@
 #/usr/bin/env bash
-WORKDIR="$HOME/dotfiles"
 
-git clone https://github.com/MrKoopaKiller/dotfiles.git $WORKDIR
+set -u
+
+export DOTDIR="${HOME}/dotfiles"
+
+git clone https://github.com/MrKoopaKiller/dotfiles.git $DOTDIR
 
 if [[ $(uname) == 'Darwin' ]]; then
     # brew install
@@ -10,7 +13,7 @@ if [[ $(uname) == 'Darwin' ]]; then
     cp -R .fonts/*.ttf /Library/Fonts/
 else
    # apt-get install
-   xargs sudo apt-get -y install < aptfile
+   xargs sudo apt-get -y install < ${DOTDIR}/aptfile
 fi
 
 # Set ZSH as default
@@ -19,6 +22,6 @@ grep $(which zsh) /etc/shells ;
 sudo chsh -s $(which zsh) $USER
 
 # Run stow
-cd $WORKDIR && stow .
+cd $DOTDIR && stow .
 [ $? -eq 1 ] && echo "Error: Remove the refereces and try again."
 echo "Done"
