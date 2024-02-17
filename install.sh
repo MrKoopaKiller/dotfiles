@@ -2,9 +2,8 @@
 
 set -u
 
-export DOTDIR="${HOME}/dotfiles"
-
-git clone https://github.com/MrKoopaKiller/dotfiles.git $DOTDIR
+DOTDIR="${HOME}/dotfiles"
+[ ! -f $DOTDIR/install.sh ] && git clone https://github.com/MrKoopaKiller/dotfiles.git $DOTDIR
 
 if [[ $(uname) == 'Darwin' ]]; then
     # brew install
@@ -17,7 +16,7 @@ else
 fi
 
 # Set ZSH as default
-grep $(which zsh) /etc/shells ; 
+grep $(which zsh) /etc/shells
 [ $? -eq 1 ] && echo $(which zsh) | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
 
