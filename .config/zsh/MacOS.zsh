@@ -1,4 +1,3 @@
-
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 bindkey "[D" backward-word # ALT-left-arrow  ⌥ + ←
