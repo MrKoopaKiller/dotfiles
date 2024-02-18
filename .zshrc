@@ -24,3 +24,7 @@ elif [[  $(uname) == 'Linux'  ]]; then
     [ ! -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
     source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi

@@ -1,10 +1,6 @@
 [user]
   name = MrKoopaKiller
   email = "sudo@iamroot.dev"
-[gpg]
-  program = gpg
-[commit]
-  gpgsign = true
 [push]
   default = current
 [fetch]
