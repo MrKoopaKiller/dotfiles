@@ -1,4 +1,3 @@
-echo "zshrc"
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
@@ -17,8 +16,7 @@ if [[ $(uname) == 'Darwin' ]]; then
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
     # Load auto-sugestions
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-elif [[  $(uname) == 'Linux'  ]]
-    echo "linux"
+elif [[  $(uname) == 'Linux'  ]]; then
     # fzf
     [ -f usr/share/doc/fzf/examples/key-bindings.zsh ] &&  source /usr/share/doc/fzf/examples/key-bindings.zsh
     [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
