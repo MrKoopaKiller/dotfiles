@@ -67,6 +67,3 @@ export PATH=${PATH}:${HOME}/bin
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

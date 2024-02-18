@@ -9,7 +9,19 @@ source $DOTDIR/.config/zsh/common.zsh
 source $DOTDIR/.config/zsh/aliases.zsh
 
 if [[ $(uname) == 'Darwin' ]]; then
-    [[ -f $DOTDIR/MacOS.zsh ]] && source $DOTDIR/MacOS.zsh
-else
-    [[ -f $DOTDIR/Linux.zsh ]] && source $DOTDIR/Linux.zsh
+    fpath+=("$(brew --prefix)/share/zsh/site-functions")
+    bindkey "[D" backward-word # ALT-left-arrow  ⌥ + ←
+    bindkey "[C" forward-word  # ALT-right-arrow ⌥ + →
+    # FZF
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    # Load auto-sugestions
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [[  $(uname) == 'Linux'  ]]
+    echo "linux"
+    # fzf
+    [ -f usr/share/doc/fzf/examples/key-bindings.zsh ] &&  source /usr/share/doc/fzf/examples/key-bindings.zsh
+    [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
+    # zsh-uto-sugestion
+    [ ! -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+    source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
