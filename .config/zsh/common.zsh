@@ -62,7 +62,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'bat -p --color always -r :50 {}'"
 export FZF_CTRL_R_OPTS="--reverse --preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZF_ALT_C_OPTS="--preview 'eza -TF {} | head -50'"
-export FZF_TMUX="$TMUX"
 
 # Other exports
 export AWS_PAGER=""
