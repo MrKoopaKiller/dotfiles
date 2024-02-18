@@ -18,7 +18,7 @@ if [[ $(uname) == 'Darwin' ]]; then
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 elif [[  $(uname) == 'Linux'  ]]; then
     # fzf
-    [ -f usr/share/doc/fzf/examples/key-bindings.zsh ] &&  source /usr/share/doc/fzf/examples/key-bindings.zsh
+    [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] &&  source /usr/share/doc/fzf/examples/key-bindings.zsh
     [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
     # zsh-uto-sugestion
     [ ! -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
