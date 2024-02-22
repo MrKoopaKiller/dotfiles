@@ -8,11 +8,11 @@ DOTDIR="${HOME}/dotfiles"
 if [[ $(uname) == 'Darwin' ]]; then
     # brew install
     brew bundle install
-    # Fonts install
-    cp -R .fonts/*.ttf /Library/Fonts/
+elif [[ $(uname) == 'linux' ]]; then
+    # apt-get install
+    xargs sudo apt-get -y install < ${DOTDIR}/aptfile
 else
-   # apt-get install
-   xargs sudo apt-get -y install < ${DOTDIR}/aptfile
+    echo "No custom install detect for the OS."
 fi
 
 # Set ZSH as default

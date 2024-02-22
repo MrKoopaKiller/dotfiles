@@ -71,9 +71,3 @@ stow .
 ```
 
 This command will create the necessary symbolic links in your home directory.
-
-### Fonts
-
-I use the `SauceCodeProNerd` font from [Nerdfonts](https://www.nerdfonts.com/) as the primary font in my setup.
-
-For manual font installation on MacOS, copy the fonts from `.fonts` to `/Library/Fonts`. On Linux, `stow` handles the installation by creating a symbolic link to `$HOME/.fonts`.

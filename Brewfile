@@ -16,6 +16,9 @@ brew "git"
 brew "jq"
 brew "neovim"
 brew "wget"
+# Fonts
+tap "homebrew/cask-fonts"
+cask "font-sauce-code-pro-nerd-font"
 
 # Others
 ## Misc
