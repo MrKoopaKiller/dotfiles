@@ -9,47 +9,42 @@ brew "tmux"
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh"
-
-# Core utils
+# Utils
 brew "coreutils"
 brew "curl"
 brew "git"
-brew "gnupg"
 brew "jq"
 brew "neovim"
+brew "wget"
+
+# Others
+## Misc
+brew "gnupg"
 brew "pinentry-mac"
 brew "pinentry"
 brew "pipenv"
 brew "pyenv"
 brew "sevenzip"
 brew "telnet"
-brew "wget"
-brew "ykman"
-
-# AWS
+## AWS
 brew "aws-iam-authenticator"
 brew "aws-vault"
 brew "awscli"
-
-# Devops tools
-brew "docker-compose"
-brew "docker"
-brew "ansible"
-brew "terraform-ls"
-brew "terraform-docs"
-brew "terragrunt"
-brew "cue"
-brew "tflint"
-brew "tfsec"
-brew "podman"
-brew "pre-commit"
-brew "tfswitch"
-brew "tgswitch"
-
-# K8s
+## K8s
 brew "k9s"
 brew "helm"
 brew "stern"
 brew "flux"
 brew "kubectx"
 brew "kubeseal"
+## Devops tools
+brew "docker-compose"
+brew "docker"
+brew "ansible"
+brew "terraform-ls"
+brew "terraform-docs"
+brew "terragrunt"
+brew "tflint"
+brew "tfsec"
+brew "podman"
+brew "pre-commit"
