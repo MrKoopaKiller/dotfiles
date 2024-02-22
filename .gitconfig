@@ -1,6 +1,19 @@
-[user]
-  name = MrKoopaKiller
-  email = "sudo@iamroot.dev"
+[includeIf "gitdir:~/repos/business"]
+    path = .gitconfig-business
+ 
+[includeIf "gitdir:~/repo/personal"]
+    path = .gitconfig-personal
+
+## Include the following content on the above files. 
+# [user]
+#   name = user
+#   email = "me@company.com"
+#   signingkey = "~/.ssh/***.pub"
+# [gpg]
+# 	format = ssh
+# [commit]
+# 	gpgsign = true
+
 [push]
   default = current
 [fetch]
