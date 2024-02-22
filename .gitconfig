@@ -1,8 +1,8 @@
-[includeIf "gitdir:~/repos/business"]
-    path = .gitconfig-business
+[includeIf "gitdir:~/repos/business/"]
+    path = ~/.gitconfig-business
  
-[includeIf "gitdir:~/repo/personal"]
-    path = .gitconfig-personal
+[includeIf "gitdir:~/repos/personal/"]
+    path = ~/.gitconfig-personal
 
 ## Include the following content on the above files. 
 # [user]
