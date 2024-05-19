@@ -7,6 +7,7 @@ alias del='trash'
 alias rm='echo -ne " ❌ ${Red}"rm" command not allowed. ✅ ${Green} Use ${UGreen}"del"${NoColor}${Green} instead.\n${NoColor}"'
 alias vim='nvim'
 alias vi='nvim'
+alias awslog='aws sso login --sso-session'
 
 # DOCKER Aliases 
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
@@ -33,10 +34,25 @@ alias kdel="k delete"
 alias kgp="kg pods"
 alias kgs="kg svc"
 alias kgi="kg ing"
+alias kx="kubectl-ctx"
+alias kv="kubens"
 
 # TERRAFORM Aliases
 alias tf="terraform"
-alias tfa="terraform apply"
-alias tfp="terraform plan"
-alias tfi="terraform init"
-alias tfi="terraform output"
+alias tfa="tf apply"
+alias tfp="tf plan"
+alias tfi="tf init"
+alias tfo="tf output"
+alias tg="terragrunt"
+alias tgi="tg init"
+alias tgp="tg plan"
+alias tga="tg apply"
+
+# Docker / podman
+alias d="docker"
+alias docker="podman"
+alias docker-compose="podman-compose"
+alias dc="podman-compose"
+alias dex="docker exec -it"
+alias dlogs="docker logs"
+alias dps="docker ps"

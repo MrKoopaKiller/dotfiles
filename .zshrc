@@ -16,6 +16,10 @@ if [[ $(uname) == 'Darwin' ]]; then
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
     # Load auto-sugestions
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    # pyenv
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
 elif [[  $(uname) == 'Linux'  ]]; then
     # fzf
     [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] &&  source /usr/share/doc/fzf/examples/key-bindings.zsh

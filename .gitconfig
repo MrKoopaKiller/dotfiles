@@ -1,6 +1,6 @@
 [includeIf "gitdir:~/repos/business/"]
     path = ~/.gitconfig-business
- 
+
 [includeIf "gitdir:~/repos/personal/"]
     path = ~/.gitconfig-personal
 

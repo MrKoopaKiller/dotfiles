@@ -69,3 +69,6 @@ export PATH=${PATH}:${HOME}/bin
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# Yubikey
+export AWS_VAULT_PROMPT=ykman ; export AWS_VAULT_KEYCHAIN_NAME=login
