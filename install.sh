@@ -15,12 +15,17 @@ else
     echo "No custom install detect for the OS."
 fi
 
+# Install vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # Set ZSH as default
 grep $(which zsh) /etc/shells
 [ $? -eq 1 ] && echo $(which zsh) | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
 
 # Run stow
+echo "Running stow..."
 cd $DOTDIR && stow .
 [ $? -eq 1 ] && echo "Error: Remove the refereces and try again."
 echo "Done"
