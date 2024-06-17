@@ -1,26 +1,35 @@
 #/usr/bin/env bash
-
 set -u
 
+def brew_install() {
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval $(/opt/homebrew/bin/brew shellenv)
+    BREW=(which brew)
+}
+
+def logging(){
+    echo "$(date -u +'%Y-%m-%d:%H:%M:%S UTC') - $msg" >> install.log
+    touch $(date) > installed.lock
+}
+
+BREW="/opt/homebrew/bin/brew"
 DOTDIR="${HOME}/dotfiles"
 [ ! -f $DOTDIR/install.sh ] && git clone https://github.com/MrKoopaKiller/dotfiles.git $DOTDIR
 
-if [[ $(uname) == 'Darwin' ]]; then
-    # brew install
-    brew bundle install
-elif [[ $(uname) == 'linux' ]]; then
-    # apt-get install
-    xargs sudo apt-get -y install < ${DOTDIR}/aptfile
-else
-    echo "No custom install detect for the OS."
-fi
+if [[ -f "$BREW"]]; then brew_install; fi
+if [[ $(uname) == 'Darwin' ]]; then; brew bundle install; fi
+if [[ $(uname) == 'linux' ]]; then xargs sudo apt-get -y install < ${DOTDIR}/aptfile; fi
 
 # Set ZSH as default
 grep $(which zsh) /etc/shells
 [ $? -eq 1 ] && echo $(which zsh) | sudo tee -a /etc/shells
+echo "+ Setting ZSH as default shell... it might required sudo password."
 sudo chsh -s $(which zsh) $USER
 
 # Run stow
+echo '+ Creating symlinks'
 cd $DOTDIR && stow .
 [ $? -eq 1 ] && echo "Error: Remove the refereces and try again."
-echo "Done"
+
+# TODO: Locking file to don't install multiple times. 
+logging

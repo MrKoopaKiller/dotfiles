@@ -1,4 +1,4 @@
-# ALIASES {{{
+## ALIASES
 # General Aliases
 alias ls='eza'
 alias ll='eza -lh --git -a'
@@ -56,3 +56,12 @@ alias dc="podman-compose"
 alias dex="docker exec -it"
 alias dlogs="docker logs"
 alias dps="docker ps"
+
+## FUNCTIONS
+# Set SSH key for gitconfig
+setcreds() {
+  PWD="$HOME/.ssh"
+  KEY=$1
+  unlink ${PWD}/id_ed25519
+  ln -s ${PWD}/${KEY} ${PWD}/id_ed25519
+}

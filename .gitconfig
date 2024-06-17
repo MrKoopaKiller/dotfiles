@@ -4,6 +4,9 @@
 [includeIf "gitdir:~/repos/personal/"]
     path = ~/.gitconfig-personal
 
+[includeIf "gitdir:~/dotfiles/"]
+    path = ~/.gitconfig-personal
+
 ## Include the following content on the above files. 
 # [user]
 #   name = user

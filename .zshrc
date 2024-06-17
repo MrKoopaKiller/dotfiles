@@ -20,7 +20,9 @@ if [[ $(uname) == 'Darwin' ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
     [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
-elif [[  $(uname) == 'Linux'  ]]; then
+fi
+
+if [[  $(uname) == 'Linux'  ]]; then
     # fzf
     [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] &&  source /usr/share/doc/fzf/examples/key-bindings.zsh
     [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
@@ -30,5 +32,5 @@ elif [[  $(uname) == 'Linux'  ]]; then
 fi
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  exec tmux new-session -A -s main
 fi

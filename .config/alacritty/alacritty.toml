@@ -1,0 +1,8 @@
+# Configuration for Alacritty
+[window]
+opacity = 0.7
+blur = true
+
+[font]
+normal = { family = "SauceCodePro Nerd Font Mono", style = "Regular" }
+size = 14.0

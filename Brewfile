@@ -1,4 +1,5 @@
 # Terminal customizations
+brew "alacritty"
 brew "bat"
 brew "eza"
 brew "fzf"

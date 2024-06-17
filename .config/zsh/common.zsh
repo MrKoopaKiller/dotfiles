@@ -48,7 +48,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 # zsh-fzf-history-search
 zinit ice lucid wait'0'
 # zinit light joshskidmore/zsh-fzf-history-search
-# fast-theme clean # Change syntax-highlight color schema
+# fast-theme base16 # Change syntax-highlight color schema
 
 # TMUX plugin manager
   if [[ ! -f $HOME/.tmux/plugins/tpm/tpm ]]; then
