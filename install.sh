@@ -20,6 +20,10 @@ if [[ -f "$BREW"]]; then brew_install; fi
 if [[ $(uname) == 'Darwin' ]]; then; brew bundle install; fi
 if [[ $(uname) == 'linux' ]]; then xargs sudo apt-get -y install < ${DOTDIR}/aptfile; fi
 
+# Install vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # Set ZSH as default
 grep $(which zsh) /etc/shells
 [ $? -eq 1 ] && echo $(which zsh) | sudo tee -a /etc/shells
@@ -27,7 +31,11 @@ echo "+ Setting ZSH as default shell... it might required sudo password."
 sudo chsh -s $(which zsh) $USER
 
 # Run stow
+<<<<<<< HEAD
 echo '+ Creating symlinks'
+=======
+echo "Running stow..."
+>>>>>>> 9ccdb5ae6183879dad0949ee2772078369146b91
 cd $DOTDIR && stow .
 [ $? -eq 1 ] && echo "Error: Remove the refereces and try again."
 

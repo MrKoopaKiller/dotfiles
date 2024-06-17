@@ -45,10 +45,14 @@ autoload -Uz _zinit
 
 # plugins
 zinit light zdharma-continuum/fast-syntax-highlighting
-# zsh-fzf-history-search
 zinit ice lucid wait'0'
+<<<<<<< HEAD
 # zinit light joshskidmore/zsh-fzf-history-search
 # fast-theme base16 # Change syntax-highlight color schema
+=======
+zinit light joshskidmore/zsh-fzf-history-search
+# fast-theme clean # Change syntax-highlight color schema
+>>>>>>> 9ccdb5ae6183879dad0949ee2772078369146b91
 
 # TMUX plugin manager
   if [[ ! -f $HOME/.tmux/plugins/tpm/tpm ]]; then
