@@ -1,5 +1,5 @@
 # Terminal customizations
-brew "alacritty"
+cask "alacritty"
 brew "bat"
 brew "eza"
 brew "fzf"
@@ -17,6 +17,7 @@ brew "git"
 brew "jq"
 brew "neovim"
 brew "wget"
+brew "rectangle"
 # Fonts
 tap "homebrew/cask-fonts"
 cask "font-sauce-code-pro-nerd-font"
@@ -42,6 +43,7 @@ brew "flux"
 brew "kubectx"
 brew "kubeseal"
 ## Devops tools
+brew "visual-studio-code"
 brew "docker-compose"
 brew "docker"
 brew "ansible"
