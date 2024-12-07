@@ -8,7 +8,7 @@ brew_install() {
 }
 
 logging() {
-    echo "$(date -u +'%Y-%m-%d:%H:%M:%S UTC') - $msg" >> install.log
+    echo "$(date -u +'%Y-%m-%d:%H:%M:%S UTC') - Installed" >> install.log
     touch $(date) > installed.lock
 }
 
