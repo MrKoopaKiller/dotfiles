@@ -24,6 +24,7 @@ cask "font-sauce-code-pro-nerd-font"
 
 # Others
 ## Misc
+brew "1password-cli"
 brew "gnupg"
 brew "pinentry-mac"
 brew "pinentry"
