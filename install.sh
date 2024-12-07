@@ -17,7 +17,7 @@ DOTDIR="${HOME}/dotfiles"
 [ ! -f $DOTDIR/install.sh ] && git clone https://github.com/MrKoopaKiller/dotfiles.git $DOTDIR
 
 if [[ -f "$BREW" ]]; then brew_install; fi
-if [[ $(uname) == 'Darwin' ]]; then; brew bundle install; fi
+if [[ $(uname) == 'Darwin' ]]; then brew bundle install; fi
 if [[ $(uname) == 'linux' ]]; then xargs sudo apt-get -y install < ${DOTDIR}/aptfile; fi
 
 # Install vim-plug
