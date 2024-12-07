@@ -1,13 +1,13 @@
 #/usr/bin/env bash
 set -u
 
-def brew_install() {
+brew_install() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval $(/opt/homebrew/bin/brew shellenv)
     BREW=(which brew)
 }
 
-def logging(){
+logging() {
     echo "$(date -u +'%Y-%m-%d:%H:%M:%S UTC') - $msg" >> install.log
     touch $(date) > installed.lock
 }
@@ -31,11 +31,7 @@ echo "+ Setting ZSH as default shell... it might required sudo password."
 sudo chsh -s $(which zsh) $USER
 
 # Run stow
-<<<<<<< HEAD
 echo '+ Creating symlinks'
-=======
-echo "Running stow..."
->>>>>>> 9ccdb5ae6183879dad0949ee2772078369146b91
 cd $DOTDIR && stow .
 [ $? -eq 1 ] && echo "Error: Remove the refereces and try again."
 
