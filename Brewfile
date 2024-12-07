@@ -17,14 +17,13 @@ brew "git"
 brew "jq"
 brew "neovim"
 brew "wget"
-brew "rectangle"
+cask "rectangle"
 # Fonts
-tap "homebrew/cask-fonts"
 cask "font-sauce-code-pro-nerd-font"
 
 # Others
 ## Misc
-brew "1password-cli"
+cask "1password-cli"
 brew "gnupg"
 brew "pinentry-mac"
 brew "pinentry"
@@ -44,7 +43,7 @@ brew "flux"
 brew "kubectx"
 brew "kubeseal"
 ## Devops tools
-brew "visual-studio-code"
+cask "visual-studio-code"
 brew "docker-compose"
 brew "docker"
 brew "ansible"
