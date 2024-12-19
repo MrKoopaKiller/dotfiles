@@ -26,9 +26,9 @@ export HISTSIZE=10000000
 export SAVEHIST=10000000
 export HISTFILE=~/.zsh_history
 
-# Colors aliases 
+# Colors aliases
 Red='\033[0;31m'
-URed='\033[4;31m' 
+URed='\033[4;31m'
 Yellow='\033[1;33m'
 UYellow='\033[4;33m'
 Green='\033[1;32m'
@@ -47,12 +47,12 @@ autoload -Uz _zinit
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit ice lucid wait'0'
 # zinit light joshskidmore/zsh-fzf-history-search
-# fast-theme base16 # Change syntax-highlight color schema
+# fast-theme zdharma  # Change syntax-highlight color schema
 
 # TMUX plugin manager
-  if [[ ! -f $HOME/.tmux/plugins/tpm/tpm ]]; then
+if [[ ! -f $HOME/.tmux/plugins/tpm/tpm ]]; then
     mkdir -p $HOME/.tmux/plugins && git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-  fi
+fi
 
 # Fzf settings
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2>/dev/null'
@@ -68,6 +68,3 @@ export PATH=${PATH}:${HOME}/bin
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
-
-# Yubikey
-export AWS_VAULT_PROMPT=ykman ; export AWS_VAULT_KEYCHAIN_NAME=login
