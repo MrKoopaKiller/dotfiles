@@ -27,7 +27,7 @@
 ## Overview
 
 This repository contains my personal dotfiles, which encompass various customizations for enhancing my development environment. It includes configurations for:
-- Kitty terminal
+- Alacritty terminal
 - ZSH with auto-complete, auto-suggestions, and fzf integration
 - TMUX with plugins like Resurrect and Continuum
 - NeoVIM with tmux integration
