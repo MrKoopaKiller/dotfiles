@@ -18,7 +18,7 @@ DOTDIR="${HOME}/dotfiles"
 
 if [[ -f "$BREW" ]]; then brew_install; fi
 if [[ $(uname) == 'Darwin' ]]; then brew bundle install; fi
-if [[ $(uname) == 'linux' ]]; then xargs sudo apt-get -y install < ${DOTDIR}/aptfile; fi
+if [[ $(uname) == 'Linux' ]]; then xargs sudo apt-get -y install < ${DOTDIR}/aptfile; fi
 
 # Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
