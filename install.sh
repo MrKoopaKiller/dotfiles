@@ -33,7 +33,7 @@ sudo chsh -s $(which zsh) $USER
 # Run stow
 echo '+ Creating symlinks'
 cd $DOTDIR && stow .
-[ $? -eq 1 ] && echo "Error: Remove the refereces and try again."
+[ $? -eq 1 ] && echo "Error: Remove the references and try again."
 
 # TODO: Locking file to don't install multiple times. 
 logging
