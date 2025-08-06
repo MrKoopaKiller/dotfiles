@@ -71,3 +71,28 @@ stow .
 ```
 
 This command will create the necessary symbolic links in your home directory.
+
+## Repository Structure
+
+- **Root files**: `install.sh`, package lists (`Brewfile`, `aptfile`), and core Zsh and Git configuration.
+- **`.config/`**: Program-specific settings for Zsh, Neovim, Tmux, and Alacritty.
+- **`scripts/`**: Custom utilities such as `steampipe_aws_config_gen.sh`.
+
+## Key Configurations
+
+- **Zsh** – `.zshenv` loads Homebrew and sets Neovim as the default editor, while `.zshrc` sources themes, shared settings, and plugins like FZF and autosuggestions.
+- **Neovim** – `init.vim` defines editor options, key mappings, and uses `vim-plug` to install plugins such as `vim-airline`, `ALE`, and FZF integration.
+- **Tmux** – `tmux.conf` remaps the prefix to `Ctrl-s`, enables mouse support, and loads plugins including Resurrect, Yank, and Prefix Highlight through `tpm`.
+- **Alacritty** – `alacritty.toml` customizes window opacity, blur, and fonts.
+- **Git** – `.gitconfig` leverages conditional includes and defines numerous aliases for common Git actions.
+- **Utility Script** – `steampipe_aws_config_gen.sh` iterates through AWS profiles and prints Steampipe connection blocks for multiple regions.
+
+## Next Steps
+
+Newcomers can explore further by:
+
+1. Learning **GNU Stow** to understand symlink-based dotfile management.
+2. Exploring **Zinit** for Zsh plugin management and custom prompts.
+3. Studying the **Tmux Plugin Manager (tpm)** to extend Tmux.
+4. Getting familiar with **vim-plug** and the Neovim plugin ecosystem.
+5. Investigating tools like **FZF** and `zoxide` to enhance the command-line experience.
