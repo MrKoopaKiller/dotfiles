@@ -79,3 +79,5 @@
   path = /opt/homebrew/bin/kdiff3
 [help]
   autocorrect = 1
+[init]
+	defaultBranch = main

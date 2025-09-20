@@ -9,7 +9,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias awslog='aws sso login --sso-session'
 
-# DOCKER Aliases 
+# DOCKER Aliases
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 
@@ -22,6 +22,8 @@ alias gci="git commit"
 alias gco="git checkout"
 alias gp="git pull"
 alias gpp="git push -u"
+alias gst="git stash"
+alias gsp="git stash pop"
 
 # K8S Aliases
 alias mk="minikube"
@@ -56,12 +58,3 @@ alias dc="podman-compose"
 alias dex="docker exec -it"
 alias dlogs="docker logs"
 alias dps="docker ps"
-
-## FUNCTIONS
-# Set SSH key for gitconfig
-setcreds() {
-  PWD="$HOME/.ssh"
-  KEY=$1
-  unlink ${PWD}/id_ed25519
-  ln -s ${PWD}/${KEY} ${PWD}/id_ed25519
-}

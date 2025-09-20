@@ -68,3 +68,6 @@ export PATH=${PATH}:${HOME}/bin
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# Set terragrunt to use terraform instead of tofu
+export TG_TF_PATH=$(which terraform)
