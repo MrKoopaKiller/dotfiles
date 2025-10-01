@@ -1,0 +1,9 @@
+# ~/.config/alacritty/local.toml  (machine-specific)
+# Use as a model for other machines
+
+[window]
+dimensions = { columns = 150, lines = 40 }  # ~quarter-ish on many displays
+position   = { x = 1440, y = 540 }          # pixels from top-left (example)
+
+# If you prefer exact pixels instead of cols/lines:
+# size = { width = 800, height = 540 }   # requires Alacritty 0.15+

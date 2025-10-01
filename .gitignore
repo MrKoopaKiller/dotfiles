@@ -2,3 +2,6 @@
 **/.zsh_history
 Brewfile.lock.*
 .gitconfig-*
+install.log
+**/.DS_Store
+**/.Trash
