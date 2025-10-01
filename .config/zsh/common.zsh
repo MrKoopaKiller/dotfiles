@@ -78,4 +78,5 @@ _fzf_complete_tsh() {
 }
 
 # Set terragrunt to use terraform instead of tofu
-export TG_TF_PATH=$(which terraform)
+export TG_TF_PATH=$(which tofu)
+export TG_LOG_FORMAT='bare'

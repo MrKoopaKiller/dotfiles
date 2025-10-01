@@ -40,7 +40,7 @@ alias kx="kubectl-ctx"
 alias kv="kubens"
 
 # TERRAFORM Aliases
-alias tf="terraform"
+alias tf="tofu"
 alias tfa="tf apply"
 alias tfp="tf plan"
 alias tfi="tf init"
