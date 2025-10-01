@@ -69,5 +69,13 @@ export PATH=${PATH}:${HOME}/bin
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
+# TSH autocomplete
+export TELEPORT_LOGIN=RaphaeldeOliveira
+_fzf_complete_tsh() {
+    _fzf_complete +m --prompt="tsh> " -- "$@" < <(
+        command cat ~/.tsh/hosts
+    )
+}
+
 # Set terragrunt to use terraform instead of tofu
 export TG_TF_PATH=$(which terraform)

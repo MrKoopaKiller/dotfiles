@@ -1,4 +1,4 @@
-# Terminal customizations
+## Terminal
 cask "alacritty"
 brew "bat"
 brew "eza"
@@ -10,7 +10,8 @@ brew "tmux"
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh"
-# Utils
+
+## Utils
 brew "coreutils"
 brew "curl"
 brew "git"
@@ -18,10 +19,11 @@ brew "jq"
 brew "neovim"
 brew "wget"
 cask "rectangle"
-# Fonts
+cask "hammerspoon"
+
+## Fonts
 cask "font-sauce-code-pro-nerd-font"
 
-# Others
 ## Misc
 cask "1password-cli"
 brew "gnupg"
@@ -31,10 +33,12 @@ brew "pipenv"
 brew "pyenv"
 brew "sevenzip"
 brew "telnet"
+
 ## AWS
 brew "aws-iam-authenticator"
 brew "aws-vault"
 brew "awscli"
+
 ## K8s
 brew "k9s"
 brew "helm"
@@ -42,10 +46,9 @@ brew "stern"
 brew "flux"
 brew "kubectx"
 brew "kubeseal"
+
 ## Devops tools
 cask "visual-studio-code"
-brew "docker-compose"
-brew "docker"
 brew "ansible"
 brew "tfswitch"
 brew "tgswitch"

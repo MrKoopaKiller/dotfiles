@@ -1,8 +1,61 @@
-# Configuration for Alacritty
+# ~/.config/alacritty/alacritty.toml
+
+[general]
+live_config_reload = true
+import = [
+  "~/.config/alacritty/colors-dark.toml",
+  "~/.config/alacritty/local.toml"   # per-machine overrides
+]
+
+[env]
+TERM = "xterm-256color"
+
 [window]
 opacity = 0.9
 blur = true
+dynamic_padding = true
+decorations = "buttonless"
+startup_mode = "Windowed" 
+# NOTE: position/size go in local.toml per machine (see below)
+
+[scrolling]
+history = 100000
+multiplier = 3
 
 [font]
 normal = { family = "SauceCodePro Nerd Font Mono", style = "Regular" }
+# Add fallbacks so the same config works on machines without your primary font
+# Alacritty will pick the first available
+builtin_box_drawing = true
 size = 14.0
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+thickness = 0.15
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0   # 0 = silent; set >0 for visual bell
+
+[selection]
+save_to_clipboard = true
+
+# macOS niceties
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+# Make Option behave like Alt on macOS
+# Values: "Both" | "OnlyLeft" | "OnlyRight" | "None"
+#option_as_alt = "Both"
+
+# Example keybindings (tweak to taste)
+[[keyboard.bindings]]
+key = "Return"
+mods = "Command"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Command"
+action = "ClearHistory"
