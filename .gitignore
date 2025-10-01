@@ -3,5 +3,6 @@
 Brewfile.lock.*
 .gitconfig-*
 install.log
+*.lock
 **/.DS_Store
 **/.Trash
