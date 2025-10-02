@@ -70,7 +70,8 @@ export PATH=${PATH}:${HOME}/bin
 eval "$(zoxide init --cmd cd zsh)"
 
 # TSH autocomplete
-export TELEPORT_LOGIN=RaphaeldeOliveira
+export TELEPORT_LOGIN=$(whoami)
+
 _fzf_complete_tsh() {
     _fzf_complete +m --prompt="tsh> " -- "$@" < <(
         command cat ~/.tsh/hosts
