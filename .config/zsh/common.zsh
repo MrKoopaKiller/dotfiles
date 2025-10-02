@@ -46,7 +46,6 @@ autoload -Uz _zinit
 # plugins
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit ice lucid wait'0'
-# zinit light joshskidmore/zsh-fzf-history-search
 # fast-theme zdharma  # Change syntax-highlight color schema
 
 # TMUX plugin manager
